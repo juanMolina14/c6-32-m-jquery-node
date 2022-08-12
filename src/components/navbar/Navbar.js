@@ -5,9 +5,10 @@ export default function Navbar(){
     return (
         <ul>
             <li>Home</li>
-            <li>Contacto</li>
-            <li>Q somos</li>
-            <li>Donde vamos</li>
+            <li>Search</li>
+            <li>Report</li>
+            <li>Adopt</li>
+            <li>Login</li>
         </ul>
         )
 }
