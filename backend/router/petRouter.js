@@ -4,7 +4,7 @@ const petController = require('../controller/petController');
 
 petRouter.get('/', petController.listPets);
 petRouter.post('/', petController.createPet);
-petRouter.delete('/', petController.deletePet);
-petRouter.put('/', petController.putPet);
+petRouter.delete('/:id', petController.deletePet);
+petRouter.put('/:id', petController.putPet);
 
 module.exports = petRouter;
