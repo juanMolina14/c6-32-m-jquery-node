@@ -1,6 +1,8 @@
 const express = require('express');
+const { home } = require('../controller/mainController');
 const router = express.Router();
+const mainController = require('../controller/mainController')
 
-router.get('/', (req, res) => res.send('Hola Backend world!'));
+router.get('/', mainController.home);
 
 module.exports = router;
