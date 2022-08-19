@@ -1,0 +1,11 @@
+.top-cards{
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 130px;
+}
+
+.card:hover{
+    background-color: rgb(245, 240, 226);
+}
+
