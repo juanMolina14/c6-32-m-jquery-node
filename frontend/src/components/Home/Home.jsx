@@ -1,12 +1,15 @@
 import React from 'react'
+import CardsMascotas from '../CardsMascotas/CardsMascotas'
 import Navbar from '../navbar/Navbar'
+import Nosotros from '../Nosotros/Nosotros'
 
 
 export default function Home() {
   return (
     <div>
-    <Navbar/>
-    <h1>hola mundo</h1>
+      <Navbar />
+      <Nosotros/>
+      <CardsMascotas/>
     </div>
   )
 }

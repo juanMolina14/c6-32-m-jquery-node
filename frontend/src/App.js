@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/Home/Home';
 
@@ -9,10 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Navigate to="/home" />}
+         />
         <Route
           path="/home"
           element={<Home />}
-          
         />
         <Route
           path="/search"
