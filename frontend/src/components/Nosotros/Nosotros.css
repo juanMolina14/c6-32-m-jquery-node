@@ -1,0 +1,23 @@
+img {
+    margin-right: 1px;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto-banner{
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+}
+.subtexto-banner{
+    position: absolute;
+    top: 49%;
+    left: 26%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
