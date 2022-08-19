@@ -4,7 +4,8 @@
   "description": "App for find or report lost pets",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "start": "node app.js",
+    "test": "nodemon -e js node app.js"
   },
   "author": "c6-32",
   "license": "ISC",
