@@ -1,6 +1,7 @@
 import React from "react";
 import './Navbar.css';
-import "bootswatch/dist/lux/bootstrap.min.css";
+import logo from '../img/logo.png'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -8,36 +9,40 @@ export default function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><strong>PET SEARCH</strong></a>
+                    <a className="navbar-brand" href="/home"><img src={logo} alt="logo" width="150px"/></a>
+
+                    <form className="d-flex">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarColor03">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" href="/">home
+                                <NavLink to="/home" className="nav-link active">Home
                                     <span className="visually-hidden">(current)</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/search">search</a>
+                                <a className="nav-link" href="/search">Search</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/report">report</a>
+                                <NavLink to="/report" className="nav-link" >Report</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/adopt">adopt</a>
+                                <NavLink to="/adopt" className="nav-link">Adopt</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/login">login</a>
+                                <NavLink to="/login" className="nav-link">Login</NavLink>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-sm-2" type="text" placeholder="Search"/>
-                                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                        </form>
                     </div>
+                    
+                        
+                    </form>
                 </div>
+
+
+               
             </nav>
         </>
     )
