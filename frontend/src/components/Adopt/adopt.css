@@ -1,0 +1,42 @@
+@keyframes saltar {
+    0% {
+        bottom: 5em
+    }
+    50% {
+        bottom: 7em
+    }
+    100% {
+        bottom: 5em
+    }
+}
+
+.saltarina {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    border: .15em solid #000;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    font-size: 1.8em;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* bottom: 3rem; */
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: saltar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ 
+}
+
+.saltarina:hover{
+    animation-play-state: paused;
+    border: #fff;
+    color: #fff;
+    background-color: #000;
+}
+
+
