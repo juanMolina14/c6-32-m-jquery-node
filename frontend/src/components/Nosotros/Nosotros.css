@@ -6,8 +6,12 @@ img {
     position: relative;
     display: inline-block;
     text-align: center;
+    background-color: black;
 }
-.texto-banner{
+.contenedor img{
+    opacity: 0.8;
+}
+/* .texto-banner{
     position: absolute;
     top: 42%;
     left: 25%;
@@ -20,4 +24,13 @@ img {
     left: 26%;
     color: rgb(255, 255, 255);
     font-size: 25px;
+} */
+.texto-banner{
+    color: rgb(255, 255, 255);
+
+}
+.subtexto-banner{
+
+    color: rgb(255, 255, 255);
+
 }
