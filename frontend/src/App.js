@@ -8,15 +8,19 @@ import Home from './components/Home/Home';
 import Register from './components/Register/Register'
 import Report from './components/Report/Report'
 import Login from './components/Login/Login';
+
 import Profile from './components/profile/Profile'
 import Adopt from './components/Adopt/Adopt';
+
+import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Navigate to="/home" />}
-         />
+        />
         <Route
           path="/home"
           element={<Home />}
@@ -42,10 +46,16 @@ function App() {
           element={<Register />}
         />
         <Route
+
           path='/profile'
           element={<Profile />}
         />
        
+        <Route
+          path="/Footer"
+          element={<Footer />}
+        />
+
       </Routes>
     </BrowserRouter>
   );

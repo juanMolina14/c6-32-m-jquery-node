@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../navbar/Navbar'
+import Footer from '../Footer/Footer'
 import "bootswatch/dist/lux/bootstrap.min.css";
 
 import FormReport from './FormReport'
@@ -30,6 +31,7 @@ const Report = () => {
         </div>
       </div>
     </div>
+    <Footer />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SelectList from './SelectList'
 import Navbar from '../navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 function Register() {
 
@@ -130,6 +131,7 @@ function Register() {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   )
 }
