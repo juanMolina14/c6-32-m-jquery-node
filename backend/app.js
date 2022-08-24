@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const router = require('./router/mainRouter');
 const petRouter = require('./router/petRouter');
-const cors = require('cors');
+const userRouter = require('./router/userRouter');
 
 app.listen(process.env.PORT || 3030, () => console.log('Server running'));
 
@@ -12,4 +13,4 @@ app.use(express.json());
 
 app.use('/', router);
 app.use('/pet', petRouter);
-app.use('/test', (req , res)=>{res.send('test url working')});
+app.use('/user', userRouter);
