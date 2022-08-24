@@ -8,6 +8,8 @@ import Home from './components/Home/Home';
 import Register from './components/Register/Register'
 import Report from './components/Report/Report'
 import Login from './components/Login/Login';
+import Profile from './components/profile/Profile'
+import Adopt from './components/Adopt/Adopt';
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
         />
         <Route
           path="/adopt"
-          element={<Navbar />}
+          element={<Adopt />}
         />
         <Route
           path="/login"
@@ -39,6 +41,11 @@ function App() {
           path="/Register"
           element={<Register />}
         />
+        <Route
+          path='/profile'
+          element={<Profile />}
+        />
+       
       </Routes>
     </BrowserRouter>
   );
