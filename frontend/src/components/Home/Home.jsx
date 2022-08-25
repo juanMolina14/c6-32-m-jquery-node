@@ -6,6 +6,8 @@ import Nosotros from '../Nosotros/Nosotros'
 import { NavLink } from 'react-router-dom'
 
 import Footer from '../Footer/Footer'
+import "bootswatch/dist/lux/bootstrap.min.css";
+// import FetchAll from './FetchAll'
 
 
 
@@ -14,6 +16,12 @@ export default function Home() {
     <>
       <Navbar />
       <Nosotros/>
+      {/* <div className="top-cards">
+                <div className="row row-cols-1 row-cols-md-3 g-4">
+                <FetchAll />
+
+                </div>
+      </div> */}
       <CardsMascotas/>
 
       <figure className="text-center">
@@ -24,10 +32,11 @@ export default function Home() {
                 <br></br>
                 <button type="button" className="btn btn-danger"><NavLink className="btn-Reportar" to="/Report">Reportar</NavLink></button>
       </figure>
+      <Footer />
     </>
 
-      <Footer />
-    </div>
+   
+
 
   )
 }
