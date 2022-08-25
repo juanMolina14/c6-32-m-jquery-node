@@ -8,8 +8,8 @@ import logo from '../img/logobyn.png';
 
 export default function Footer() {
     return (
-        <div>
-            <footer className="bg-dark d-flex align-items-center">
+  <>
+     <footer className="bg-dark d-flex align-items-center">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-4 d-flex justify-content-center">
@@ -71,6 +71,8 @@ export default function Footer() {
 
                 </div>
             </footer>
-        </div>
+  </>
+           
+    
     )
 }
