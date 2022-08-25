@@ -6,31 +6,57 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import './adopt.css'
+import FetchMascotas from './FetchMascotas';
 
 const Adopt = () => {
   return (
     <>
         <Navbar />
-        <div className="container">
-           
-            <div className='position-relative'>
-                <img src="https://superpet.pe/blog/wp-content/uploads/2017/05/PERRITOpaginas-1.jpg" className="img-fluid" alt="..." />
-                <div className="position-absolute top-0 start-50 translate-middle-x ">
-    
-                    <h1 className=' text-bg-dark p-3 mt-5'>Adopta un amigo</h1>
-                </div>
-                <a href="#adopciones" class="saltarina"> <FontAwesomeIcon icon={solid('chevron-down')} />  </a>  
-            </div> 
-  
+        <div className="container mt-5 text-center">
 
+           <div className="row">
+           
+              <div className="col-2"></div>
+                <div className="col-8 m-0">
+                    <h1 className=' text-bg-dark p-3'>Adopta un amigo</h1>       
+                </div>
+                <div className="col-2"></div>
+            
+                    
                  
-            <div className='row justify-content-center position-relative'>
-                <div className="col-8 text-center position-absolute top-50 start-50 translate-middle">
-                    <h3><i>Luego de estar algún tiempo en busqueda de su dueño, la mascota pasa a estar disponible para adopción.
-                         Lo cual le brinda una nueva oportunidad para integrarse a una familia</i></h3>
+        
+
+           </div>
+
+           <div className="row">
+                <div className="col"> 
+                    <img src="https://superpet.pe/blog/wp-content/uploads/2017/05/PERRITOpaginas-1.jpg" className="img-fluid" alt="..." />
+                    <a href="#adopciones" className="saltarina "> <FontAwesomeIcon icon={solid('chevron-down')} />  </a>  
                 </div>
                 
+           </div>
+          
+              
+          
+            
+  
+
+         
+            <div className="row text-center">
+                    <div className="col-2">
+                        
+                    </div>
+                    <div className="col-8">
+                    <h3><i>Luego de estar algún tiempo en busqueda de su dueño, la mascota pasa a estar disponible para adopción.
+                         Lo cual le brinda una nueva oportunidad para integrarse a una familia</i></h3>
+                    </div>
+                    <div className="col-2">
+
+                    </div>
             </div>
+      
+
+           
 
             <div className="row justify-content-center mt-5" >
                 <div className="col-8 mt-5">
@@ -54,74 +80,9 @@ const Adopt = () => {
                 </div>
            </div>
 
-           <div className="row py-3" id='adopciones'>
-            <div className="col-md-4 p-2">
-            <div className="card">
-                <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div className='d-flex d-flex justify-content-center'>
-                        <a href="</home>" className="btn btn-success">Contactar</a>
-                      </div>
-                </div>
+            <div className="row py-3" id='adopciones'>
+                <FetchMascotas />
             </div>
-            </div>
-        
-            <div className="col-md-4 p-2">
-                <div className="card">
-                    <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div className='d-flex d-flex justify-content-center'>
-                        <a href="</home>" className="btn btn-success">Contactar</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md-4 p-2">
-            <div className="card">
-                <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div className='d-flex d-flex justify-content-center'>
-                        <a href="</home>" className="btn btn-success">Contactar</a>
-                      </div>
-                </div>
-            </div>
-            </div>
-            <div className="col-md-4 p-2">
-            <div className="card">
-                <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div className='d-flex d-flex justify-content-center'>
-                        <a href="</home>" className="btn btn-success">Contactar</a>
-                      </div>
-                </div>
-            </div>
-            </div>
-            <div className="col-md-4 p-2">
-            <div className="card">
-                <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div className='d-flex d-flex justify-content-center'>
-                        <a href="</home>" className="btn btn-success">Contactar</a>
-                      </div>
-                </div>
-            </div>
-            </div>
-  
-           
-       
-       
-       </div>
 
   
         </div>
