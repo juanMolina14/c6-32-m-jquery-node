@@ -22,11 +22,14 @@ export default function Footer() {
                                 </a>
                             </div>
                         </div>
+                       
+                        {/* Boton de contacto */}
                         <div className="col-md-4 d-flex justify-content-center">
                             <button type="button" className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Contactanos
                             </button>
 
+                            {/* Modal con form para contacto */}
                             <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div className="modal-dialog" role="document">
                                     <div className="modal-content">
@@ -40,22 +43,28 @@ export default function Footer() {
                                             <form>
                                                 <fieldset>
                                                     <div className="form-group row">
-                                                        <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
-                                                        <div className="col-sm-10">
-                                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style={{backgroundImage: 'url("data:image/png', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll', backgroundSize: '16px 18px', backgroundPosition: '98% 50%', cursor: 'auto'}} />
+                                                        <label htmlFor="staticName" className="col-sm-2 col-form-label mt-3">Nombre</label>
+                                                        <div className="col-sm-12">
+                                                            <input type="text" className="form-control" id="inputName" aria-describedby="emailName" placeholder="Decinos tu nombre completo" style={{ backgroundImage: 'url("data:image/png', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll', backgroundSize: '16px 18px', backgroundPosition: '98% 50%', cursor: 'auto' }} />
+                                                        </div>
+                                                    </div>
+                                                    <div className="form-group row">
+                                                        <label htmlFor="staticEmail" className="col-sm-2 col-form-label mt-3">Email</label>
+                                                        <div className="col-sm-12">
+                                                            <input type="email" className="form-control" id="inputMail" aria-describedby="emailHelp" placeholder="nombre@mail.com" style={{ backgroundImage: 'url("data:image/png', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll', backgroundSize: '16px 18px', backgroundPosition: '98% 50%', cursor: 'auto' }} />
                                                         </div>
                                                     </div>
                                                     <div className="form-group">
                                                         <label htmlFor="exampleTextarea" className="form-label mt-4">Dejanos tu consulta y nos pondremos en contacto</label>
-                                                        <textarea className="form-control" id="exampleTextarea" rows={3} defaultValue={""} />
-                                                    </div>                                                                                                        
+                                                        <textarea className="form-control" id="exampleTextarea" rows={4} defaultValue={""} />
+                                                    </div>
                                                 </fieldset>
                                             </form>
 
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-primary">Send</button>
-                                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-success">Send</button>
+                                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
