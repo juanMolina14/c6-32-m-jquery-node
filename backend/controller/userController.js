@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 
 const userDataPath = path.join(__dirname, '../database/userData.json');
 const userDataText = fs.readFileSync(userDataPath, 'utf-8');
@@ -19,7 +21,18 @@ module.exports = {
     
     createUser: (req, res) => {
         const newUser = {
-            ...req.body
+            id: crypto.randomUUID() ,
+            password: bcrypt.hashSync(req.body.password, 10),
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            phone: req.body.phone,
+            email: req.body.email,
+            street: req.body.street,
+            number: req.body.number,
+            province: req.body.province,
+            department: req.body.department,
+            city: req.body.city,
+            cbu: req.body.cbu
         }
         users.push(newUser);
         saveChangesUser(newUser);
@@ -36,7 +49,17 @@ module.exports = {
     putUser: (req, res) => {
         const userToUpdate = users.findIndex(user => req.params.id == user.id);
         const updateUser = {
-            ...req.body
+            password: bcrypt.hashSync(req.body.password, 10),
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            phone: req.body.phone,
+            email: req.body.email,
+            street: req.body.street,
+            number: req.body.number,
+            province: req.body.province,
+            department: req.body.department,
+            city: req.body.city,
+            cbu: req.body.cbu
         }
         users.splice(userToUpdate, 1, updateUser);
         saveChangesUser();
