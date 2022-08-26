@@ -1,31 +1,72 @@
 import React from 'react';
-import './Footer.css';
 import "bootswatch/dist/lux/bootstrap.min.css";
+import './Footer.css';
 import Face from '../img/facebook.png';
 import Inst from '../img/instagram.png';
+import Twitter from '../img/twitter.png';
+import Linkedin from '../img/linkedin.png';
 import logo from '../img/logobyn.png';
 
 
 export default function Footer() {
     return (
         <div>
-            <footer className="bg-dark d-flex align-items-center">
+            <footer className="bg-dark py-5 d-flex align-items-start">
                 <div className="container-fluid">
                     <div className="row">
+                        {/* Redes sociales */}
                         <div className="col-md-4 d-flex justify-content-center">
                             <div className='d-flex justify-content-between contLogos'>
                                 <a href="https://facebook.com">
-                                    <img src={Face} alt="Logo facebook" className='logos' />
+                                <img src={Face} alt="Logo Facebook" className='logos' />
                                 </a>
                                 <a href="https://instagram.com">
                                     <img src={Inst} alt="Logo instagram" className='logos' />
                                 </a>
+                                <a href="https://twitter.com">
+                                    <img src={Twitter} alt="Logo Twitter" className='logos' />
+                                </a>
+                                <a href="https://linkedin.com">
+                                    <img src={Linkedin} alt="Logo Linkedin" className='logos' />
+                                </a>
                             </div>
                         </div>
-                       
-                        {/* Boton de contacto */}
+
+                        {/* Links de secciones */}
                         <div className="col-md-4 d-flex justify-content-center">
-                            <button type="button" className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <ul className="navbar-nav d-flex justify-content-center">
+                                <li className="nav-item">
+                                    <a href="/home" className="nav-link linkFooter">HOME
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link linkFooter" href="/search">SEARCH</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="/report" className="nav-link linkFooter" >REPORT</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="/adopt" className="nav-link linkFooter">ADOPT</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="/login" className="nav-link linkFooter">LOGIN</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                        
+                        <div className="col-md-4 d-flex flex-column align-items-center justify-content-between">
+                            {/* Logo de footer */}
+                            <a href="/home">
+                                <img src={logo} alt="Logo empresa" width="150px" />
+                            </a>
+                            <p>¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
+
+                            {/* Boton de contacto */}
+                            <button type="button" className="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
                                 Contactanos
                             </button>
 
@@ -63,20 +104,16 @@ export default function Footer() {
 
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-success">Send</button>
-                                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-outline-success">Send</button>
+                                            <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <a href="/home">
-                                <img src={logo} alt="Logo empresa" width="150px" />
-                            </a>
                         </div>
                     </div>
+
+                    <p className='align-self-bottom reg'>@2022. Pet-Search marca registrada. Todos los derechos reservados</p>
 
                 </div>
             </footer>

@@ -1,11 +1,37 @@
-footer {
-    height: 5rem;
-}
+/* footer {
+    /*height: 20em;
+} */
 
 .contLogos {
-    width: 20%;
+    width: 50%;
 }
 
 .logos {
     width: 3rem;
+}
+
+#btnModal {
+    height: 3rem;
+    background-color: white;
+    /*transition: all 0.5s;*/
+}
+
+ #btnModal:hover {
+    background-color: #343a40;
+    color: white;
+    
+}
+
+.linkFooter {
+    color: white;
+    font-weight:bolder;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.reg {
+    margin-top: 10em;
 }
