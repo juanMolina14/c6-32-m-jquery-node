@@ -1,36 +1,80 @@
-img {
-    margin-right: 1px;
-}
-
-.contenedor{
+.contenedor {
     position: relative;
     display: inline-block;
-    text-align: center;
     background-color: black;
 }
-.contenedor img{
+
+.contenedor img {
     opacity: 0.6;
 }
-/* .texto-banner{
-    position: absolute;
-    top: 42%;
-    left: 25%;
+
+.texto-banner {
     color: rgb(255, 255, 255);
-    font-size: 55px;
+    position: absolute;
+    top: 50%;
+    font-size: 45px;
+    text-align: center;
+    width: 100%;
 }
-.subtexto-banner{
-    position: absolute;
-    top: 49%;
-    left: 26%;
+
+.subtexto-banner {
     color: rgb(255, 255, 255);
+    position: absolute;
+    top: 57%;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.quienes-somos {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 100%;
+}
+
+
+.quienes-somos h2 {
+    font-size: 45px;
+}
+
+.quienes-somos p {
+    font-size: 35px;
+}
+
+.quienes-somos figcaption {
     font-size: 25px;
-} */
-.texto-banner{
-    color: rgb(255, 255, 255);
-
+    color: rgb(222, 155, 1);
 }
-.subtexto-banner{
 
-    color: rgb(255, 255, 255);
 
+@media only screen and (max-width: 700px) {
+
+    .texto-banner {
+        top: 55%;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+
+    }
+
+    .subtexto-banner {
+        top: 65%;
+        color: rgb(255, 255, 255);
+        font-size: 11px;
+
+    }
+
+    .quienes-somos h2 {
+        font-size: 23px;
+    }
+
+    .quienes-somos p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .quienes-somos figcaption {
+        margin-top: 3px;
+        font-size: 19px;
+        color: rgb(250, 150, 19);
+    }
 }

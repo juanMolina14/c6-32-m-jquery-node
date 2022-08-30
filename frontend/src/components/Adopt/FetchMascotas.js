@@ -6,7 +6,7 @@ const FetchMascotas = () => {
     const [reqData, setReqData] = useState([]);
   
     useEffect(() => {
-      fetch("http://localhost:3030/pet/")
+      fetch("http://192.168.0.199:3000/pet/")
         .then((res) => {
           return res.json();
         })
