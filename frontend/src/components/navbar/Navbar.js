@@ -11,6 +11,7 @@ import "bootswatch/dist/lux/bootstrap.min.css";
 export default function Navbar() {
     return (
         <>
+
         <Headroom>
             <nav className="navbar navbar-expand-md bg-light">
                 <div className="container-fluid  ">
@@ -105,6 +106,8 @@ export default function Navbar() {
             </div>
         </nav> */}
         </Headroom>
+ 
+        
 
  
 

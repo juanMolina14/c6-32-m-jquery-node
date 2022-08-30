@@ -15,6 +15,7 @@ import Adopt from './components/Adopt/Adopt';
 import Footer from './components/Footer/Footer';
 
 
+
 function App() {
   return (
     <BrowserRouter>
