@@ -1,15 +1,32 @@
-.top-cards{
-    margin-top: 100px;
+.top-cards {
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
+    border-top-left-radius: 1rem;
 }
 
-.card:hover{
-    background-color: rgb(245, 240, 226);
+.card{
+ border-top-left-radius: 20%;
 }
 
-.btn-Reportar{
+.top-cards img {
+    height: 300px;
+}
+
+.top-cards h5{
+    text-align: center;
+}
+
+.card-body:hover {
+    background-color: rgb(246, 237, 228);
+}
+
+.btn-Reportar {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 700px) {
+    .top-cards img {
+        height: 200px;
+    }
+}
