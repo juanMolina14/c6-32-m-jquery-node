@@ -11,14 +11,14 @@ import logo from '../img/logobyn.png';
 export default function Footer() {
     return (
         <div>
-            <footer className="bg-dark py-5 d-flex align-items-start">
+            <footer className="bg-dark d-flex align-items-center">
                 <div className="container-fluid">
                     <div className="row">
                         {/* Redes sociales */}
                         <div className="col-md-4 d-flex justify-content-center">
                             <div className='d-flex justify-content-between contLogos'>
                                 <a href="https://facebook.com">
-                                <img src={Face} alt="Logo Facebook" className='logos' />
+                                    <img src={Face} alt="Logo Facebook" className='logos' />
                                 </a>
                                 <a href="https://instagram.com">
                                     <img src={Inst} alt="Logo instagram" className='logos' />
@@ -57,7 +57,7 @@ export default function Footer() {
 
 
 
-                        
+
                         <div className="col-md-4 d-flex flex-column align-items-center justify-content-between">
                             {/* Logo de footer */}
                             <a href="/home">
@@ -118,5 +118,7 @@ export default function Footer() {
                 </div>
             </footer>
         </div>
+
+
     )
 }

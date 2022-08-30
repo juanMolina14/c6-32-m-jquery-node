@@ -111,6 +111,11 @@ function Register() {
           )} 
           </div>
 
+          <div className="col-md-6 d-flex  align-items-center justify-content-center my-3 "> 
+          <label htmlFor="formFile" className="form-label col-4 text-center ">Foto de perfil (opcional)</label>
+          <input className="form-control" type="file" id="formFile" />
+        </div>
+
           <div className="col-md-6 mx-auto d-flex align-items-center">
             <label className="form-label me-3">CBU</label>
             <input type="text" className="form-control " />

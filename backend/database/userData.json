@@ -1,0 +1,16 @@
+[
+    {
+        "id": "9974ab01-7784-4164-b166-91eb9a738c28",
+        "password": "$2a$10$LnX/aJ.Gm7IjNzXtHfu8meWYaYmRPGJa4ws1j9lFVp5Loz8M21MoO",
+        "firstname": "Don Néstor",
+        "lastname": "Soria",
+        "phone": "035414432222",
+        "email": "rio@cosquin.com",
+        "street": "Ruta 38",
+        "number": "144",
+        "province": "Córdoba",
+        "department": "Punilla",
+        "city": "Cosquín",
+        "cbu": "1234567890123456789012"
+    }
+]
