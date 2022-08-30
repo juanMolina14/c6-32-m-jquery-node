@@ -50,6 +50,7 @@ export default function Navbar() {
                                     </NavLink>
                                 </li>
                             </ul>
+
                         </div>
                     </div>
                 </nav>
@@ -93,7 +94,10 @@ export default function Navbar() {
                     
             </div>
         </nav> */}
+
             </Headroom>
+ 
+
         </>
     )
 }
