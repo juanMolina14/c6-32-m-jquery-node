@@ -8,11 +8,10 @@ import Home from './components/Home/Home';
 import Register from './components/Register/Register'
 import Report from './components/Report/Report'
 import Login from './components/Login/Login';
-
 import Profile from './components/profile/Profile'
 import Adopt from './components/Adopt/Adopt';
-
 import Footer from './components/Footer/Footer';
+import Search from './components/Search/Search';
 
 
 
@@ -28,7 +27,7 @@ function App() {
         />
         <Route
           path="/search"
-          element={<Navbar />}
+          element={<Search />}
         />
         <Route
           path="/report"

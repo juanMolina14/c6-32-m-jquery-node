@@ -34,10 +34,10 @@ const SelectList = ({ title, url}) => {
         {loading && <Loader />}
               
         {/* <select className="form-select" name={id} id={id} onChange={handleChange}> */}
-          <option value="" className="col-md-6">Elige un {title}</option>
+          <option value="">Elige un {title}</option>
           {options &&
             options.map((el) => (
-              <option key={el.id} value={el.nombre} className="col-md-6">
+              <option key={el.id} value={el.nombre} >
                 {el.nombre}
               </option>
             ))}
