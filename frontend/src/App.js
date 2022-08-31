@@ -3,7 +3,6 @@ import './App.css';
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
 import Home from './components/Home/Home';
 import Register from './components/Register/Register'
 import Report from './components/Report/Report'
