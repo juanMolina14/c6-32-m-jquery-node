@@ -5,6 +5,7 @@ import "bootswatch/dist/lux/bootstrap.min.css";
 
 import FormReport from './FormReport'
 
+
 const Report = () => {
   return (
     <>
