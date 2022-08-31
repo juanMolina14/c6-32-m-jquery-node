@@ -1,6 +1,6 @@
 import React from 'react';
-import "bootswatch/dist/lux/bootstrap.min.css";
 import './Footer.css';
+import "bootswatch/dist/lux/bootstrap.min.css";
 import Face from '../img/facebook.png';
 import Inst from '../img/instagram.png';
 import Twitter from '../img/twitter.png';
@@ -54,16 +54,12 @@ export default function Footer() {
                             </ul>
                         </div>
 
-
-
-
-
                         <div className="col-md-4 d-flex flex-column align-items-center justify-content-between">
                             {/* Logo de footer */}
                             <a href="/home">
                                 <img src={logo} alt="Logo empresa" width="150px" />
                             </a>
-                            <p>¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
+                            <p className="texto">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
 
                             {/* Boton de contacto */}
                             <button type="button" className="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
@@ -112,13 +108,9 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-
-                    <p className='align-self-bottom reg'>@2022. Pet-Search marca registrada. Todos los derechos reservados</p>
-
+                    <p className='align-self-bottom reg texto'>@2022. Pet-Search marca registrada. Todos los derechos reservados</p>
                 </div>
             </footer>
         </div>
-
-
     )
 }

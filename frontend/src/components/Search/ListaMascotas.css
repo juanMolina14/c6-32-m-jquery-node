@@ -1,0 +1,17 @@
+.color-card{
+    background-color: rgb(240, 240, 240);
+}
+
+.color-card:hover{
+    background-color: rgb(218, 214, 234);
+}
+
+.card-body:hover{
+    background-color: rgb(218, 214, 234);
+}
+
+.card-body button{
+    margin-left: 40%;
+    margin-top: 50px;
+}
+

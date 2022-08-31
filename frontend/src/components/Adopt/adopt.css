@@ -2,9 +2,11 @@
     0% {
         bottom: 1em
     }
+
     50% {
         bottom: 3em
     }
+
     100% {
         bottom: 1em
     }
@@ -22,21 +24,42 @@
     align-items: center;
     justify-content: center;
     position: relative;
-   /* bottom: 0;  */
+    /* bottom: 0;  */
     left: 50%;
     transform: translateX(-50%);
     animation-name: saltar;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
- 
+
 }
 
-.saltarina:hover{
+.saltarina:hover {
     animation-play-state: paused;
     border: #fff;
     color: #fff;
     background-color: #000;
 }
 
+.Banner-adopt{
+    text-align: center;
+}
 
+.Adoptar-texto {
+    margin-bottom: 8%;
+    width: 100%;
+}
+
+
+.Adoptar-texto h2 {
+    font-size: 45px;
+}
+
+.Adoptar-texto p {
+    font-size: 35px;
+}
+
+.Adoptar-texto figcaption {
+    font-size: 25px;
+    color: rgb(222, 155, 1);
+}

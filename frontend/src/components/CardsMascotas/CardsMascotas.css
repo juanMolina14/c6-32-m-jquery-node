@@ -5,15 +5,15 @@
     border-top-left-radius: 1rem;
 }
 
-.card{
- border-top-left-radius: 20%;
+.card {
+    border-top-left-radius: 20%;
 }
 
 .top-cards img {
     height: 300px;
 }
 
-.top-cards h5{
+.top-cards h5 {
     text-align: center;
 }
 
