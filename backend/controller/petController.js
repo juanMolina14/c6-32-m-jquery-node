@@ -19,7 +19,20 @@ module.exports = {
     
     createPet: (req, res) => {
         const newPet = {
-            ...req.body
+            id: crypto.randomUUID() ,
+            category: req.body.category,
+            breed: req.body.breed,
+            color: req.body.color,
+            size: req.body.size,
+            name: req.body.name,
+            description: req.body.description,
+            street: req.body.street,
+            number: req.body.number,
+            province: req.body.province,
+            department: req.body.department,
+            city: req.body.city
+            // must implement multer
+            // petPic: req.body.petPic
         }
         pets.push(newPet);
         saveChangesPets(newPet);
@@ -36,7 +49,17 @@ module.exports = {
     putPet: (req, res) => {
         const petToUpdate = pets.findIndex(pet => req.params.id == pet.id);
         const updatePet = {
-            ...req.body
+            category: req.body.category,
+            breed: req.body.breed,
+            color: req.body.color,
+            size: req.body.size,
+            name: req.body.name,
+            description: req.body.description,
+            street: req.body.street,
+            number: req.body.number,
+            province: req.body.province,
+            department: req.body.department,
+            city: req.body.city
         }
         pets.splice(petToUpdate, 1, updatePet);
         saveChangesPets();
