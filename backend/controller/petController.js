@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const petDataPath = path.join(__dirname, '../database/petData.json');
 const petDataText = fs.readFileSync(petDataPath, 'utf-8');
@@ -23,7 +24,7 @@ module.exports = {
     
     createPet: (req, res) => {
         const newPet = {
-            id: crypto.randomUUID() ,
+            id: crypto.randomUUID(),
             category: req.body.category,
             breed: req.body.breed,
             color: req.body.color,
@@ -40,7 +41,7 @@ module.exports = {
         }
         pets.push(newPet);
         saveChangesPets(newPet);
-        res.send(`Created: ${newPet}`)
+        res.send(`Created: ${JSON.stringify(newPet)}`)
     },
     
     deletePet: (req, res) => {
