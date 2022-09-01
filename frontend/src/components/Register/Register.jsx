@@ -180,10 +180,10 @@ const password2 = watch("password2", "");
             <input className="form-control"{...register("cbu",{ required:{value: false} , maxLength: 20 })} />             
           </div>
 
-          <div className="position-relative col-md-6">
+          <div className="position-relative col-md-6 d-flex justify-content-center">
              <button 
                 type="submit"
-               className="btn btn-primary mt-5 position-absolute top-0 start-50 translate-middle"
+               className="btn btn-primary mt-5 "
              >
                Registrar
              </button>
