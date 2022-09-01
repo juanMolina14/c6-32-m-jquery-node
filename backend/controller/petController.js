@@ -69,11 +69,5 @@ module.exports = {
         pets.splice(petToUpdate, 1, updatePet);
         saveChangesPets();
         res.send(`Updated: pet id ${petToUpdate} with ${JSON.stringify(updatePet)}`)
-    },
-
-    getGenericData: (req, res) => {
-        // const genData = [];
-        // gDataPets.push(pets.map(pet => pet));
-        res.send(petGenData);
-    },
+    }
 };

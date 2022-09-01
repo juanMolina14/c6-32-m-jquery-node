@@ -9,7 +9,7 @@ import Message from "./Message";
 
 const SelectList = ({ title, url}) => {
   const { data, error, loading } = UseFetch(url);
-  //console.log(data, error, loading);
+  // console.log(data, error, loading);
 
   if (!data) return null;
 
@@ -25,8 +25,9 @@ const SelectList = ({ title, url}) => {
   // let id = `select-${title}`;
   // let label = title.charAt(0).toUpperCase() + title.slice(1);
  
-    options = data[title];
-   
+  options = data[title];
+
+  console.log(options);
 
   return (
     <>

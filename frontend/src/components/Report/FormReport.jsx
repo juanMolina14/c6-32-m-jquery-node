@@ -1,7 +1,8 @@
-import React from 'react'
-import SelectList from '../Register/SelectList'
+import SelectList from '../Register/SelectList';
 import "bootswatch/dist/lux/bootstrap.min.css";
 import { useForm } from "react-hook-form";
+import React , {useEffect, useState} from 'react';
+
 export default function FormReport() {
     const mascotasAPI = {
         categoria : [
@@ -61,11 +62,27 @@ export default function FormReport() {
             }
         ]
     };
+
+    // const [reqData, setReqData] = useState([]);
+
+    // useEffect(() => {
+    //   fetch("http://localhost:3030/pet/genericData")
+    //     .then((res) => {
+    //         console.log(res);
+    //       return res.json()
+    //     })
+    //     .then((data) => {
+    //         console.log(data);
+    //       setReqData(data[0]);
+    //     });
+    // }, []);
+
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         defaultValues:{
         //shelter: false,
     }
     });
+
     const onSubmit = data =>  {
         
         console.log(data)
@@ -104,36 +121,52 @@ export default function FormReport() {
     // const calle = watch("calle", "");
     const province = watch("province", "");
     const department = watch("department", "");
+    const category = watch("category", "");
+    const breed = watch("breed", "");
   
   return (
     <>
     <div className="container">
          <form  className="row g-3 mb-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="row my-5">
-                <div className="col-md-4">
+                
+            <div className="col-md-4 mt-3">
                     <label className="form-label">Categoría</label>
-                    <select className="form-select"  aria-invalid={errors.category ? "true" : "false"}{...register("category",{ required: true})}> 
-                        <option value="">Elige</option>
-                        {
-                            mascotasAPI.categoria.map((el) => (
-                            <option key={el.nombre} value={el.nombre}>
-                                {el.nombre}
-                            </option>
-                            ))}
+                    <select className="form-select"  aria-invalid={errors.category ? "true" : "false"}{...register("category",{ required: true})}>
+                        <SelectList
+                            title="category"
+                            url={`http://localhost:3030/api/category`}
+                 
+                        />
                     </select>
+                    {errors.category && errors.category.type === "required" && (
+                    <span role="alert">Seleccione una categoría</span>
+                    )}
                 </div>
-                <div className="col-md-4">
+
+                <div className="col-md-4 mt-3">
                     <label className="form-label">Raza</label>
-                    <select className="form-select"  aria-invalid={errors.breed ? "true" : "false"}{...register("breed",{ required: true})}> 
-                        <option value="">Elige</option>
-                        {
-                          mascotasAPI.raza.map((el) => (
-                          <option key={el.nombre} value={el.nombre}>
-                              {el.nombre}
-                          </option>
-                          ))}
-                    </select>
+                    {!category && (
+                        <select className="form-select " >
+                            <option value="">...</option>
+                        </select>
+                    )}
+             
+                    {category && (
+                        <select  className="form-select"  aria-invalid={errors.breed ? "true" : "false"}{...register("breed",{ required: true})}>
+                        <SelectList
+                            title="breed"
+                            url={`http://localhost:3030/api/breed`}
+                        
+                        />
+                        </select>
+                    )} 
+                    {errors.breed && errors.breed.type === "required" && (
+                        <span role="alert">Seleccione una raza</span>
+                    )}
                 </div>
+
+
                 <div className="col-md-4">
                     <label className="form-label">Color</label>
                     <select className="form-select"  aria-invalid={errors.color ? "true" : "false"}{...register("color",{ required: true})}>

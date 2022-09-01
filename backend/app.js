@@ -4,6 +4,7 @@ const cors = require('cors');
 const router = require('./router/mainRouter');
 const petRouter = require('./router/petRouter');
 const userRouter = require('./router/userRouter');
+const apiRouter = require('./router/apiRouter');
 const session = require("express-session");
 
 app.listen(process.env.PORT || 3030, () => console.log('Server running'));
@@ -22,3 +23,4 @@ app.use(
 app.use('/', router);
 app.use('/pet', petRouter);
 app.use('/user', userRouter);
+app.use('/api', apiRouter);

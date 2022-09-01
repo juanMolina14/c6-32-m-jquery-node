@@ -7,6 +7,4 @@ petRouter.post('/', petController.createPet);
 petRouter.delete('/:id', petController.deletePet);
 petRouter.put('/:id', petController.putPet);
 
-petRouter.get('/genericData', petController.getGenericData);
-
 module.exports = petRouter;
