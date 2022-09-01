@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <div>
             <footer className="bg-dark d-flex align-items-center">
-                <div className="container-fluid">
+                <div className="container-fluid mt-4">
                     <div className="row">
                         {/* Redes sociales */}
                         <div className="col-md-4 d-flex justify-content-center">
@@ -43,9 +43,6 @@ export default function Footer() {
                                     <a className="nav-link linkFooter" href="/search">SEARCH</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="/report" className="nav-link linkFooter" >REPORT</a>
-                                </li>
-                                <li className="nav-item">
                                     <a href="/adopt" className="nav-link linkFooter">ADOPT</a>
                                 </li>
                                 <li className="nav-item">
@@ -62,7 +59,7 @@ export default function Footer() {
                             <p className="texto">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
 
                             {/* Boton de contacto */}
-                            <button type="button" className="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
+                            <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
                                 Contactanos
                             </button>
 
