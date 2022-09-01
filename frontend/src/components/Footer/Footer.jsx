@@ -1,11 +1,17 @@
 import React from 'react';
 import './Footer.css';
 import "bootswatch/dist/lux/bootstrap.min.css";
-import Face from '../img/facebook.png';
-import Inst from '../img/instagram.png';
-import Twitter from '../img/twitter.png';
-import Linkedin from '../img/linkedin.png';
+// import Face from '../img/facebook.png';
+// import Inst from '../img/instagram.png';
+// import Twitter from '../img/twitter.png';
+// import Linkedin from '../img/linkedin.png';
 import logo from '../img/logobyn.png';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Instagram, Facebook, Twitter, Linkedin } from 'react-bootstrap-icons';
+import { NavLink } from 'react-router-dom';
+// import { Twitter } from 'react-bootstrap-icons';
+// import { Facebook } from 'react-bootstrap-icons';
+// import { Linkedin } from 'react-bootstrap-icons';
 
 
 export default function Footer() {
@@ -18,35 +24,40 @@ export default function Footer() {
                         <div className="col-md-4 d-flex justify-content-center">
                             <div className='d-flex justify-content-between contLogos'>
                                 <a href="https://facebook.com">
-                                    <img src={Face} alt="Logo Facebook" className='logos' />
+                                    {/* <img src={Face} alt="Logo Facebook" className='logos' /> */}
+                                    <Facebook color='white' size={48} />
+
                                 </a>
                                 <a href="https://instagram.com">
-                                    <img src={Inst} alt="Logo instagram" className='logos' />
+                                    {/* <img src={Inst} alt="Logo instagram" className='logos' /> */}
+                                    <Instagram color='white' size={48} />
                                 </a>
                                 <a href="https://twitter.com">
-                                    <img src={Twitter} alt="Logo Twitter" className='logos' />
+                                    {/* <img src={Twitter} alt="Logo Twitter" className='logos' /> */}
+                                    <Twitter color='white' size={48} />                                    
                                 </a>
                                 <a href="https://linkedin.com">
-                                    <img src={Linkedin} alt="Logo Linkedin" className='logos' />
-                                </a>
+                                    {/* <img src={Linkedin} alt="Logo Linkedin" className='logos' /> */}
+                                    <Linkedin color='white' size={48} />
+</a>
                             </div>
                         </div>
 
                         {/* Links de secciones */}
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <ul className="navbar-nav d-flex justify-content-center">
-                                <li className="nav-item">
-                                    <a href="/home" className="nav-link linkFooter">HOME
-                                    </a>
+                        <div className="col-md-4 d-flex justify-content-center py-3">
+                            <ul className="navbar-nav">
+                                <li className="nav-item liItem">
+                                    <NavLink to="/home" className="nav-link linkFooter">HOME
+                                    </NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link linkFooter" href="/search">SEARCH</a>
+                                <li className="nav-item liItem">
+                                    <NavLink className="nav-link linkFooter" to="/search">SEARCH</NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="/adopt" className="nav-link linkFooter">ADOPT</a>
+                                <li className="nav-item liItem">
+                                    <NavLink to="/adopt" className="nav-link linkFooter">ADOPT</NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="/login" className="nav-link linkFooter">LOGIN</a>
+                                <li className="nav-item liItem">
+                                    <NavLink to="/login" className="nav-link linkFooter">LOGIN</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -56,7 +67,7 @@ export default function Footer() {
                             <a href="/home">
                                 <img src={logo} alt="Logo empresa" width="150px" />
                             </a>
-                            <p className="texto">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
+                            <p className="texto my-3">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
 
                             {/* Boton de contacto */}
                             <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
