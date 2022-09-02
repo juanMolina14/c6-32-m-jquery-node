@@ -1,15 +1,16 @@
 import React , {useEffect, useState} from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useForm } from "react-hook-form";
 import CssBaseline from '@mui/material/CssBaseline';
 import { CssVarsProvider } from '@mui/joy/styles';
 import Sheet from '@mui/joy/Sheet';
 import Typography from '@mui/joy/Typography';
 import TextField from '@mui/joy/TextField';
 import Button from '@mui/joy/Button';
-import { NavLink, useNavigate } from 'react-router-dom'
 import Navbar from '../navbar/Navbar'
 import Footer from '../Footer/Footer'
-import { useForm } from "react-hook-form";
 import './login.css'
+
 
 const Login = () => {
 
@@ -20,18 +21,16 @@ const Login = () => {
     const [userData, setUserData] = useState([]);
 
     useEffect(() => {
-        localStorage.setItem('userData', JSON.stringify(userData));
+        localStorage.setItem('userID', JSON.stringify(userData));
     }, [userData]);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         defaultValues:{
         //shelter: false,
-    }
+        }
     });
 
     const onSubmit = (data) =>  {
-        
-        console.log(`JSON STRINGIFY #1 ${JSON.stringify(data)}`)
 
         const validation = fetch("http://localhost:3030/login", {
             method: "POST",
@@ -44,26 +43,22 @@ const Login = () => {
         })
         .then( response => {
                 if (!response.ok) { setLoginError(response) };
-                console.log(response);
-                // response.json();
-                // setUserData(response.json());
 
                 return response.json();
 
-                // console.log(JSON.stringify(data.json()));
-                // sessionStorage.setItem('userData', JSON.stringify(data.json()));
-                // alert(JSON.stringify(data))
-                // alert(hasError);
             }
         )
 
         const saveUser = async () => {
+
             const userLogged = await validation;
-            setUserData(userLogged);
+
             if (userLogged.user){
-                return navigate('/');
+                setUserData(userLogged);
             }
-          };
+
+            if(userData.user) {return navigate('/')};
+        };
 
         saveUser();
     };
@@ -102,7 +97,7 @@ const Login = () => {
                             </div>                       
                             <div className="col-md-12 mt-3">
                                 <label className="form-label">Password</label>
-                                <input type="password" className="form-control" aria-invalid={errors.password ? "true" : "false"}{...register("password",{ required: true, maxLength: 20, minLength: 6 })}/>
+                                <input type="password" className="form-control" suggested="current-password" aria-invalid={errors.password ? "true" : "false"}{...register("password",{ required: true, maxLength: 20, minLength: 6 })}/>
                             </div>
                         </div>
                         { loginError.ok == false &&
