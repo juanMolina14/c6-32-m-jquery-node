@@ -2,6 +2,7 @@ import React from 'react'
 import SelectList from '../Register/SelectList'
 import "bootswatch/dist/lux/bootstrap.min.css";
 import { useForm } from "react-hook-form";
+
 export default function FormReport() {
     const mascotasAPI = {
         categoria : [

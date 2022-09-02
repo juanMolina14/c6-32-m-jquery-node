@@ -34,12 +34,12 @@ export default function Footer() {
                                 </a>
                                 <a href="https://twitter.com">
                                     {/* <img src={Twitter} alt="Logo Twitter" className='logos' /> */}
-                                    <Twitter color='white' size={48} />                                    
+                                    <Twitter color='white' size={48} />
                                 </a>
                                 <a href="https://linkedin.com">
                                     {/* <img src={Linkedin} alt="Logo Linkedin" className='logos' /> */}
                                     <Linkedin color='white' size={48} />
-</a>
+                                </a>
                             </div>
                         </div>
 
