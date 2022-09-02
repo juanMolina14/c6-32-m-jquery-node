@@ -1,7 +1,8 @@
-import React , {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactPaginate from "react-paginate";
 import "bootswatch/dist/lux/bootstrap.min.css";
-import "./ListaMascotas.css"
+import "./ListaMascotas.css";
+
 
 export default function ListaMascotas(props) {
     const { data } = props;
@@ -24,6 +25,7 @@ export default function ListaMascotas(props) {
     return (
         <>
             <div className="reqData">
+                <div className="row py-3">
                 {currentItems.map(e => {
                     return (
                         <div className="card mb-3 color-card" key={e.id} >
@@ -36,6 +38,15 @@ export default function ListaMascotas(props) {
                                         <h5 className="card-title">{e.name}</h5>
                                         <p className="card-text">{e.description}</p>
                                         <button type="button" className="btn btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#exampleModal">Detalle</button>
+
+                        <div className="cards-search col-md-4 p-2" key={e.id}>
+                            <div className="card">
+                                <img src="https://static3.ideal.es/www/multimedia/201909/06/media/cortadas/perro-impuesto-kl3B-U9069082473uHE-624x385@Ideal.jpg" className="card-img-top" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="card-title">{e.name}</h5>
+                                    <p className="card-text">{e.description}</p>
+                                    <div className='d-flex d-flex justify-content-center'>
+                                        <button type="button" class="btn btn-outline-dark">Detalle</button>
                                     </div>
                                 </div>
                             </div>
@@ -61,6 +72,7 @@ export default function ListaMascotas(props) {
                         
                     );
                 })}
+                </div>
             </div>
             <ReactPaginate
                 breakLabel="..."
