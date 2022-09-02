@@ -5,6 +5,7 @@ import Navbar from '../navbar/Navbar'
 
 import 'bootswatch/dist/lux/bootstrap.min.css'
 import './Profile.css'
+import Footer from '../Footer/Footer'
 
 export default function ImageAvatars() {
   return (
@@ -158,7 +159,7 @@ export default function ImageAvatars() {
 
         
     </div>
-
+    <Footer />
     </>
   )
 }

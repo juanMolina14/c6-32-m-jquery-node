@@ -8,6 +8,7 @@
 
 .logos {
     width: 3rem;
+    /* background-color: white; */
 }
 
 #btnModal {
@@ -24,6 +25,16 @@
 
 .linkFooter {
     color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.liItem {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
 }
 
 .texto {
