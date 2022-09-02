@@ -60,7 +60,7 @@ const Login = () => {
         const saveUser = async () => {
             const userLogged = await validation;
             setUserData(userLogged);
-            if (userLogged !== undefined){
+            if (userLogged.user){
                 return navigate('/');
             }
           };
