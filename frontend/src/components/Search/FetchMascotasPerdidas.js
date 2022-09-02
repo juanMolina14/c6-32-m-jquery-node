@@ -3,13 +3,16 @@ import "bootswatch/dist/lux/bootstrap.min.css";
 import ListaMascotas from './ListaMascotas';
 import './FetchMascotasPerdidas.css';
 import SelectList from '../Register/SelectList';
-import { useForm } from "react-hook-form";
-
 
 const FetchMascotasPerdidas = () => {
 
   const [reqData, setReqData] = useState([]);
-  const [filter, setFilter] = useState([]);
+  const [searchProvince, setSearchProvince] = useState("");
+  const [searchDepartment, setSearchDepartment] = useState("");
+  const [searchCity, setSearchCity] = useState("");
+  const [searchCategory, setSearchCategory] = useState("");
+  const [province, setProvince] = useState("");
+  const [department, setDepartment] = useState("");
 
 
   const mascotasAPI = {
@@ -71,55 +74,76 @@ const FetchMascotasPerdidas = () => {
     ]
   };
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
-    defaultValues: {
-      //shelter: false,
-    }
-  });
 
+  const URL = 'http://localhost:3030/pet'
 
-  const filterReqData = (filter) => {
-      console.log("dentro de la funcion con data:" + filter);
+  const showData = async () => {
+    const response = await fetch(URL)
+    const data = await response.json()
+    setReqData(data[0]);
+ 
+  }  
+  
+  
+  useEffect(()=>{
+    showData()
+
+  },[])
+
+  const searcherProvince = (e) =>{
+    setSearchProvince(e.target.value)
+   
+    setProvince(e.target.value)
+    setSearchDepartment("")
+  }
+  const searcherDepartment = (e) =>{
+    setSearchDepartment(e.target.value)
+   
+    setDepartment(e.target.value)
+    setSearchCity("")
+  }
+  const searcherCity = (e) =>{
+    setSearchCity(e.target.value)
+    setSearchCategory("")
+  }
+  const searcherCategory = (e) =>{
+    setSearchCategory(e.target.value)
+    
   }
 
 
-  const onSubmit = data => {
-    setFilter(data);
-    filterReqData(filter);
-  }
+  
+  let results2 = reqData;
 
-  const province = watch("province", "");
-  const department = watch("department", "");
+  const results = !searchProvince ? reqData : reqData.filter( (dato) =>dato.province.toLowerCase().includes(searchProvince.toLocaleLowerCase()))
+{searchProvince &&(
+  results2 = !searchDepartment ? results : results.filter( (dato) =>dato.department.toLowerCase().includes(searchDepartment.toLocaleLowerCase()))
+)}
+{searchDepartment &&(
+  results2 = !searchCity ? results2 : results2.filter( (dato) =>dato.city.toLowerCase().includes(searchCity.toLocaleLowerCase()))
+)}
+{searchCity &&(
+  results2 = !searchCategory ? results2 : results2.filter( (dato) =>dato.category.toLowerCase().includes(searchCategory.toLocaleLowerCase()))
+)}
 
-  useEffect(() => {
-    fetch("http://localhost:3030/pet/")
-      .then((res) => {
-        return res.json()
-      })
-      .then((data) => {
-        setReqData(data[0]);
-      });
-  }, []);
 
 
 
   return (
     <div>
-      <form className="row g-3 mb-5" onSubmit={handleSubmit(onSubmit)}>
+      <form className="row g-3 mb-5">
         <div className="row my-5">
 
           <div className="col-md-4 mt-3">
             <label className="form-label">Provincia</label>
-            <select className="form-select" aria-invalid={errors.province ? "true" : "false"}{...register("province", { required: true })}>
+            <select value={searchProvince}  onChange={searcherProvince} className="form-select">
               <SelectList
                 title="provincias"
                 url={`https://apis.datos.gob.ar/georef/api/provincias?orden=nombre`}
 
               />
             </select>
-            {errors.province && errors.province.type === "required" && (
-              <span role="alert">Seleccione una Provincia</span>
-            )}
+           
           </div>
           <div className="col-md-4 mt-3">
             <label className="form-label">Departamento</label>
@@ -130,7 +154,7 @@ const FetchMascotasPerdidas = () => {
             )}
 
             {province && (
-              <select className="form-select" aria-invalid={errors.department ? "true" : "false"}{...register("department", { required: true })}>
+              <select  value={searchDepartment}  onChange={searcherDepartment} className="form-select">
                 <SelectList
                   title="departamentos"
                   url={`https://apis.datos.gob.ar/georef/api/departamentos?orden=nombre&max=5000&provincia=${province}`}
@@ -138,9 +162,7 @@ const FetchMascotasPerdidas = () => {
                 />
               </select>
             )}
-            {errors.department && errors.department.type === "required" && (
-              <span role="alert">Seleccione una departamento</span>
-            )}
+           
           </div>
           <div className="col-md-4 mt-3">
             <label className="form-label">Localidad</label>
@@ -150,21 +172,19 @@ const FetchMascotasPerdidas = () => {
               </select>
             )}
             {department && (
-              <select className="form-select" aria-invalid={errors.city ? "true" : "false"}{...register("city", { required: true })}>
+              <select className="form-select"  value={searchCity}  onChange={searcherCity}>
                 <SelectList
                   title="localidades"
                   url={`https://apis.datos.gob.ar/georef/api/localidades?orden=nombre&max=5000&departamento=${department}`}
                 />
               </select>
             )}
-            {errors.city && errors.city.type === "required" && (
-              <span role="alert">Seleccione una localidad</span>
-            )}
+           
           </div>
         </div>
         <div className="col-md-4">
           <label className="form-label">Categoría</label>
-          <select className="form-select" aria-invalid={errors.category ? "true" : "false"}{...register("category", { required: true })}>
+          <select className="form-select" value={searchCategory}  onChange={searcherCategory}>
             <option value="">Elige</option>
             {
               mascotasAPI.categoria.map((el) => (
@@ -175,17 +195,10 @@ const FetchMascotasPerdidas = () => {
           </select>
         </div>
 
-        <div className="position-relative">
-          <button
-            type="submit"
-            className="btn btn-primary position-absolute top-0 start-50 translate-middle">
-              Buscar
-          </button>
-        </div>
-
+       
       </form>
 
-      <ListaMascotas data={reqData} />
+      <ListaMascotas data={results2} />
     </div>
   );
 
