@@ -35,11 +35,30 @@ export default function ListaMascotas(props) {
                                     <div className="card-body">
                                         <h5 className="card-title">{e.name}</h5>
                                         <p className="card-text">{e.description}</p>
-                                        <button type="button" className="btn btn-outline-dark ">Detalle</button>
+                                        <button type="button" className="btn btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#exampleModal">Detalle</button>
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 className="card-title">{e.name}</h5>
+                    <p className="card-text">{e.description}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Contactar</button>
+                </div>
+                </div>
+            </div>
+            </div>
                         </div>
+                        
                     );
                 })}
             </div>
@@ -57,6 +76,10 @@ export default function ListaMascotas(props) {
                 nextLinkClassName="page-num"
                 activeLinkClassName="active"
             />
+
+
+
+
         </>
     );
 
