@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <>
             <Headroom>
-                <nav className="navbar navbar-expand-md bg-light p-2">
+                <nav className="navbar navbar-expand-md bg-light">
                     <div className="container-fluid  ">
                         <div className="container d-flex justify-content-between">
                             <div>
