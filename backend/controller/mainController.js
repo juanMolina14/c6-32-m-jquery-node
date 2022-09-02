@@ -46,7 +46,8 @@ module.exports = {
         //     errors: [{ msg: "Loged in" }],
         //     old: req.body,
         // });
-        res.redirect(200, "/");
+        // res.redirect(200, "/");
+        res.send({user: req.session.loggedUser});
     },
     signout: (req, res) => {
         req.session.destroy();
