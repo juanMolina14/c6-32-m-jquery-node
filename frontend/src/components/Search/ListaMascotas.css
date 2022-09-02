@@ -1,16 +1,5 @@
-.color-card{
-    background-color: rgb(240, 240, 240);
-}
+.cards-search .card-body:hover{
 
-.color-card:hover{
-    background-color: rgb(218, 214, 234);
-}
+    background-color: rgb(232, 238, 212);
 
-.card-body:hover{
-    background-color: rgb(218, 214, 234);
-}
-
-.card-body button{
-    margin-left: 40%;
-    margin-top: 50px;
 }
