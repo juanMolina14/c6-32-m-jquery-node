@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import ReactPaginate from "react-paginate";
 import "bootswatch/dist/lux/bootstrap.min.css";
-import "./ListaMascotas.css";
+import "./ListaAdoptados.css";
 
 
-export default function ListaMascotas(props) {
+export default function ListaAdoptados(props) {
     const { data } = props;
     const [currentItems, setCurrentItems] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
-    const itemsPerPage = 6;
+    const itemsPerPage = 9;
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
@@ -25,7 +25,7 @@ export default function ListaMascotas(props) {
     return (
         <>
             <div className="reqData">
-                <div className="row py-3 text-center">
+                <div className="row py-3">
                 {currentItems.map(e => {
                     return (
                         <div className="cards-search col-md-4 p-2" key={e.id}>
