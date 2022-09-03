@@ -11,9 +11,10 @@ export default function Navbar() {
     return (
         <>
             <Headroom>
-                <nav className="navbar navbar-expand-md bg-light">
+                
+                <nav className="navbar navbar-expand-md bg-light p-2 " >
                     <div className="container-fluid  ">
-                        <div className="container d-flex justify-content-between">
+                        <div className="container d-flex justify-content-between ">
                             <div>
                                 <NavLink className="nav-link" to="/home"><img src={logo} alt="logo" width="200px" /></NavLink>
                             </div>

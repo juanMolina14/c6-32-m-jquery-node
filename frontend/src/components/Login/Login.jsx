@@ -5,8 +5,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CssVarsProvider } from '@mui/joy/styles';
 import Sheet from '@mui/joy/Sheet';
 import Typography from '@mui/joy/Typography';
-import TextField from '@mui/joy/TextField';
-import Button from '@mui/joy/Button';
+// import TextField from '@mui/joy/TextField';
+// import Button from '@mui/joy/Button';
 import Navbar from '../navbar/Navbar'
 import Footer from '../Footer/Footer'
 import './login.css'
@@ -24,7 +24,7 @@ const Login = () => {
         localStorage.setItem('userID', JSON.stringify(userData));
     }, [userData]);
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         defaultValues:{
         //shelter: false,
         }
@@ -100,7 +100,7 @@ const Login = () => {
                                 <input type="password" className="form-control" suggested="current-password" aria-invalid={errors.password ? "true" : "false"}{...register("password",{ required: true, maxLength: 20, minLength: 6 })}/>
                             </div>
                         </div>
-                        { loginError.ok == false &&
+                        { loginError.ok === false &&
                             <p className='text-center text-danger fw-bold mb-0 mt-3'>
                                 Credenciales inválidas...
                             </p>
