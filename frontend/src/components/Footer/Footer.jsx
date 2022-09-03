@@ -17,62 +17,58 @@ import { NavLink } from 'react-router-dom';
 export default function Footer() {
     return (
         <div>
-            <footer className="bg-dark d-flex align-items-center">
-                <div className="container-fluid mt-4">
-                    <div className="row">
+            <footer className="bg-dark d-flex align-items-center pt-3">
+                <div className="container-fluid mt-4 ">
+                    <div className="row align-items-center">
                         {/* Redes sociales */}
-                        <div className="col-md-4 d-flex">
-                            <div className='d-flex contLogos'>
-                                <a href="https://facebook.com" className='logos'>
+                        <div className="col-md-4 d-flex justify-content-center ">
+                            <div className='d-flex  justify-content-around contLogos '>
+                                <a className='p-2' href="https://facebook.com">
                                     {/* <img src={Face} alt="Logo Facebook" className='logos' /> */}
-                                    <Facebook color='white' size={48} />
+                                    <Facebook color='white' size={30} />
+
                                 </a>
-                                <a href="https://instagram.com" className='logos'>
+                                <a className='p-2' href="https://instagram.com">
                                     {/* <img src={Inst} alt="Logo instagram" className='logos' /> */}
-                                    <Instagram color='white' size={48} />
+                                    <Instagram color='white' size={30} />
                                 </a>
-                                <a href="https://twitter.com" className='logos'>
+                                <a className='p-2' href="https://twitter.com">
                                     {/* <img src={Twitter} alt="Logo Twitter" className='logos' /> */}
-                                    <Twitter color='white' size={48} />
+                                    <Twitter color='white' size={30} />
                                 </a>
-                                <a href="https://linkedin.com" className='logos'>
+                                <a className='p-2' href="https://linkedin.com">
                                     {/* <img src={Linkedin} alt="Logo Linkedin" className='logos' /> */}
-                                    <Linkedin color='white' size={48} />
+                                    <Linkedin color='white' size={30} />
                                 </a>
                             </div>
                         </div>
 
                         {/* Links de secciones */}
-                        <div className="col-md-4 d-flex justify-content-center py-3">
-                            <ul className="navbar-nav margin-nav">
-                                <li className="nav-item liItem ">
+                        <div className="col-md-4 d-flex justify-content-center ">
+                            <ul className="navbar-nav">
+                                <li className="nav-item liItem">
                                     <NavLink to="/home" className="nav-link linkFooter">HOME
                                     </NavLink>
-                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem ">
+                                <li className="nav-item liItem">
                                     <NavLink className="nav-link linkFooter" to="/search">SEARCH</NavLink>
-                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem ">
+                                <li className="nav-item liItem">
                                     <NavLink to="/adopt" className="nav-link linkFooter">ADOPT</NavLink>
-                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem ">
+                                <li className="nav-item liItem">
                                     <NavLink to="/login" className="nav-link linkFooter">LOGIN</NavLink>
                                 </li>
                             </ul>
                         </div>
 
-                        <div className="col-md-4 d-flex flex-column align-items-center justify-content-between margin-der">
+                        <div className="col-md-4 d-flex flex-column align-items-center justify-content-between">
                             {/* Logo de footer */}
-                            <br></br>
                             <a href="/home">
-                                <img src={logo} alt="Logo empresa" width="150px" />
+                                <img src={logo} alt="Logo empresa" width="70em" />
                             </a>
-                            <br></br>
                             <p className="texto my-3">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
-                            <br></br>
+
                             {/* Boton de contacto */}
                             <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
                                 Contactanos
@@ -112,17 +108,21 @@ export default function Footer() {
 
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-outline-success">Enviar</button>
-                                            <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" className="btn btn-outline-success">Send</button>
+                                            <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p className='align-self-bottom reg texto'>@2022. Pet-Search marca registrada. Todos los derechos reservados</p>
+                    <div className='texto pt-4'>
+
+                    <p>@2022. Pet-Search marca registrada. Todos los derechos reservados</p>
+                    </div>
                 </div>
             </footer>
         </div>
     )
 }
+
