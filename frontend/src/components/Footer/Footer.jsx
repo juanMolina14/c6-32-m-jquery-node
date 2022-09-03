@@ -5,7 +5,7 @@ import "bootswatch/dist/lux/bootstrap.min.css";
 // import Inst from '../img/instagram.png';
 // import Twitter from '../img/twitter.png';
 // import Linkedin from '../img/linkedin.png';
-import logo from '../img/logobyn.png';
+import logo from '../img/logo-vertical.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Instagram, Facebook, Twitter, Linkedin } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
@@ -21,22 +21,21 @@ export default function Footer() {
                 <div className="container-fluid mt-4">
                     <div className="row">
                         {/* Redes sociales */}
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <div className='d-flex justify-content-between contLogos'>
-                                <a href="https://facebook.com">
+                        <div className="col-md-4 d-flex">
+                            <div className='d-flex contLogos'>
+                                <a href="https://facebook.com" className='logos'>
                                     {/* <img src={Face} alt="Logo Facebook" className='logos' /> */}
                                     <Facebook color='white' size={48} />
-
                                 </a>
-                                <a href="https://instagram.com">
+                                <a href="https://instagram.com" className='logos'>
                                     {/* <img src={Inst} alt="Logo instagram" className='logos' /> */}
                                     <Instagram color='white' size={48} />
                                 </a>
-                                <a href="https://twitter.com">
+                                <a href="https://twitter.com" className='logos'>
                                     {/* <img src={Twitter} alt="Logo Twitter" className='logos' /> */}
                                     <Twitter color='white' size={48} />
                                 </a>
-                                <a href="https://linkedin.com">
+                                <a href="https://linkedin.com" className='logos'>
                                     {/* <img src={Linkedin} alt="Logo Linkedin" className='logos' /> */}
                                     <Linkedin color='white' size={48} />
                                 </a>
@@ -45,30 +44,35 @@ export default function Footer() {
 
                         {/* Links de secciones */}
                         <div className="col-md-4 d-flex justify-content-center py-3">
-                            <ul className="navbar-nav">
-                                <li className="nav-item liItem">
+                            <ul className="navbar-nav margin-nav">
+                                <li className="nav-item liItem ">
                                     <NavLink to="/home" className="nav-link linkFooter">HOME
                                     </NavLink>
+                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem">
+                                <li className="nav-item liItem ">
                                     <NavLink className="nav-link linkFooter" to="/search">SEARCH</NavLink>
+                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem">
+                                <li className="nav-item liItem ">
                                     <NavLink to="/adopt" className="nav-link linkFooter">ADOPT</NavLink>
+                                    <br></br>
                                 </li>
-                                <li className="nav-item liItem">
+                                <li className="nav-item liItem ">
                                     <NavLink to="/login" className="nav-link linkFooter">LOGIN</NavLink>
                                 </li>
                             </ul>
                         </div>
 
-                        <div className="col-md-4 d-flex flex-column align-items-center justify-content-between">
+                        <div className="col-md-4 d-flex flex-column align-items-center justify-content-between margin-der">
                             {/* Logo de footer */}
+                            <br></br>
                             <a href="/home">
                                 <img src={logo} alt="Logo empresa" width="150px" />
                             </a>
+                            <br></br>
                             <p className="texto my-3">¡Ayudamos a las Familias a encontrar a su Mascota extraviada!</p>
-
+                            <br></br>
                             {/* Boton de contacto */}
                             <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnModal">
                                 Contactanos
@@ -108,8 +112,8 @@ export default function Footer() {
 
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-outline-success">Send</button>
-                                            <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-outline-success">Enviar</button>
+                                            <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
                                         </div>
                                     </div>
                                 </div>

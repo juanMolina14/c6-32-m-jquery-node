@@ -3,11 +3,17 @@
 } */
 
 .contLogos {
-    width: 50%;
+    margin-top: 30%;
+    justify-content:center;
+    align-items: center;
+}
+
+.margin-der{
+    margin-top: 10%;
 }
 
 .logos {
-    width: 3rem;
+    padding: 15px;
     /* background-color: white; */
 }
 
@@ -35,6 +41,7 @@
     display: flex;
     justify-content: center;
     margin-right: 0;
+
 }
 
 .texto {
@@ -44,4 +51,21 @@
 
 .reg {
     margin-top: 9em;
+}
+
+
+.margin-nav{
+    margin-top: 40%;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .contLogos {
+        margin-top: 10%;
+
+    }
+
+    .margin-nav{
+        margin-top: 15%;
+    }
 }
