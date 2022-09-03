@@ -63,3 +63,22 @@
     font-size: 25px;
     color: rgb(222, 155, 1);
 }
+
+@media only screen and (max-width: 700px) {
+
+
+    .Adoptar-texto h2 {
+        font-size: 18px;
+    }
+
+    .Adoptar-texto p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .Adoptar-texto figcaption {
+        margin-top: 3px;
+        font-size: 19px;
+        color: rgb(250, 150, 19);}
+
+    }

@@ -79,19 +79,6 @@ export default function ListaAdoptados(props) {
                 nextLinkClassName="page-num"
                 activeLinkClassName="active"
             />
-
-
-
-
-
-
-
-
-
-
-
-
-
         </>
     );
 
