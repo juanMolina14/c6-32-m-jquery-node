@@ -67,9 +67,9 @@ export default function FormReport() {
         //shelter: false,
     }
     });
-    const onSubmit = data =>  {
+    const onSubmit = (data,e) =>  {
         
-        console.log(data)
+       
             fetch("http://localhost:3030/pet", {
               method: "POST",
             //   credentials: 'include',
@@ -91,18 +91,18 @@ export default function FormReport() {
         })
         .then(
             (data)=>{
-                
-                alert(JSON.stringify(data))
+                alert("Mascota cargada con exito")
+                //alert(JSON.stringify(data))
             }
         );
+            
+      // limpiar campos
+         e.target.reset();
+        
     }
-    // const categoria = watch("categoria", "");
-    // const raza = watch("raza", "");
-    // const color = watch("color", "");
-    // const tamanio = watch("tamanio", "");
-    // const nombre = watch("nombre", "");
-    // const descripcion = watch("descripcion", "");
-    // const calle = watch("calle", "");
+
+
+
     const province = watch("province", "");
     const department = watch("department", "");
   
@@ -169,7 +169,7 @@ export default function FormReport() {
                 </div> */}
                 <div className="col-md-12 mt-3">
                     <label className="form-label">Descripcion</label>
-                    <textarea className="form-control"  aria-invalid={errors.description ? "true" : "false"}{...register("description",{ required: false, maxLength: 20 })}/>
+                    <textarea className="form-control"  aria-invalid={errors.description ? "true" : "false"}{...register("description",{ required: false, maxLength: 100 })}/>
                 </div>                       
                 <div className="col-md-8 mt-3">
                     <label className="form-label">Calle</label>
